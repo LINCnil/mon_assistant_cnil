@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UnX-S8-nPu" customClass="ConversationInputToolbarView" customModule="CNILAssistant" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9n-wN-Mte" customClass="SeparatorView" customModule="CNILAssistant" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                    <color key="backgroundColor" name="Separator"/>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yXu-1U-Yho" customClass="UITextViewWithPlaceholder" customModule="CNILAssistant" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="368" height="119"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="750" constant="40" id="Gzo-hL-Lec"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWf-k1-639">
+                    <rect key="frame" x="376" y="43.5" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="pbj-Sa-5kf"/>
+                        <constraint firstAttribute="height" constant="32" id="wZx-Km-wQF"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="SendIcon"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="yXu-1U-Yho" secondAttribute="bottom" id="2Of-Ir-yYA"/>
+                <constraint firstItem="B9n-wN-Mte" firstAttribute="top" secondItem="UnX-S8-nPu" secondAttribute="top" id="Owr-sA-97T"/>
+                <constraint firstItem="yXu-1U-Yho" firstAttribute="leading" secondItem="UnX-S8-nPu" secondAttribute="leading" id="WS8-E7-iHZ"/>
+                <constraint firstItem="jWf-k1-639" firstAttribute="centerY" secondItem="yXu-1U-Yho" secondAttribute="centerY" id="XoQ-41-ujv"/>
+                <constraint firstItem="jWf-k1-639" firstAttribute="leading" secondItem="yXu-1U-Yho" secondAttribute="trailing" constant="8" id="fGw-uA-TTE"/>
+                <constraint firstItem="B9n-wN-Mte" firstAttribute="leading" secondItem="UnX-S8-nPu" secondAttribute="leading" id="gu8-zj-Z8d"/>
+                <constraint firstAttribute="trailing" secondItem="jWf-k1-639" secondAttribute="trailing" constant="6" id="ktu-Vj-nhE"/>
+                <constraint firstAttribute="trailing" secondItem="B9n-wN-Mte" secondAttribute="trailing" id="oEl-6a-VFH"/>
+                <constraint firstItem="yXu-1U-Yho" firstAttribute="top" secondItem="UnX-S8-nPu" secondAttribute="top" id="p1a-Yo-uwz"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="sendButton" destination="jWf-k1-639" id="fwk-Sp-rzD"/>
+                <outlet property="textView" destination="yXu-1U-Yho" id="Mki-Xz-R4U"/>
+                <outlet property="textViewHeightConstraint" destination="Gzo-hL-Lec" id="aiS-rD-xA6"/>
+            </connections>
+            <point key="canvasLocation" x="592.75362318840587" y="-49.888392857142854"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="B9n-wN-Mte">
+            <size key="intrinsicContentSize" width="1" height="0.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="SendIcon" width="21" height="18"/>
+        <namedColor name="Separator">
+            <color red="0.80392156862745101" green="0.84705882352941175" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

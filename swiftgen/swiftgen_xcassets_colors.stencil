@@ -1,0 +1,93 @@
+// swiftlint:disable all
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
+{% set projectPrefix %}APP{% endset %}
+
+import Foundation
+import UIKit
+{% set variablePrefix %}{{projectPrefix|lowerFirstWord}}_{% endset %}
+{% if catalogs %}
+{% set colorAlias %}{{param.colorAliasName|default:"Color"}}{% endset %}
+{% set enumName %}{{param.enumName|default:"Asset"}}{% endset %}
+{% set colorType %}{{param.colorTypeName|default:"ColorAsset"}}{% endset %}
+{% macro enumBlock assets sp %}
+{{sp}}  {% call casesBlock assets sp %}
+{% endmacro %}
+{% macro casesBlock assets sp %}
+{{sp}}  {% for asset in assets %}
+{{sp}}  {% if asset.type == "color" %}
+{{sp}}  static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{colorType}}(name: "{{asset.value}}")
+{{sp}}  {% elif asset.items %}
+{{sp}}  enum {{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+{{sp}}    {% set sp2 %}{{sp}}  {% endset %}
+{{sp}}    {% call casesBlock asset.items sp2 %}
+{{sp}}  }
+{{sp}}  {% endif %}
+{{sp}}  {% endfor %}
+{% endmacro %}
+{% macro colorStaticConstant prefix path assets sp %}
+{{sp}}  {% for asset in assets %}
+{{sp}}  {% if asset.type == "color" %}
+{{sp}}    {% if prefix == "" %}
+{{sp}}      {% set fullname %}{{variablePrefix}}{{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}{% endset %}
+{{sp}}static let {{fullname}} = {{path}}.{{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}.color
+{{sp}}    {% elif 1 %}
+{{sp}}      {% set fullname %}{{variablePrefix}}{{prefix}}{{asset.name|swiftIdentifier:"pretty"|upperFirstLetter|escapeReservedKeywords}}{% endset %}
+{{sp}}static let {{fullname}} = {{path}}.{{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}.color
+{{sp}}    {% endif %}
+{{sp}}  {% elif asset.items %}
+{{sp}}    {% set nextPath %}{{path}}.{{asset.name}}{% endset %}
+{{sp}}    {% set nextPrefix %}{{prefix}}{{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords}}{% endset %}
+{{sp}}    {% if prefix == "" %}
+{{sp}}      {% set nextPrefix %}{{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords|lowerFirstWord}}{% endset %}
+{{sp}}      {% call colorStaticConstant nextPrefix nextPath asset.items sp%}
+{{sp}}    {% elif 1 %}
+{{sp}}      {% set nextPrefix %}{{prefix}}{{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords}}{% endset %}
+{{sp}}      {% call colorStaticConstant nextPrefix nextPath asset.items sp%}
+{{sp}}    {% endif %}
+{{sp}}  {% endif %}
+{{sp}}  {% endfor %}
+{% endmacro %}
+
+public typealias {{colorAlias}} = UIColor
+
+// swiftlint:disable all
+public extension {{colorAlias}} {
+  {% if catalogs.count > 0 %}
+  {% for catalog in catalogs %}
+  {% set path %}{{enumName}}.{{catalog.name|swiftIdentifier:"pretty"|escapeReservedKeywords}}{% endset %}
+  {% call colorStaticConstant "" path catalog.assets "  " %}
+  {% endfor %}
+  {% endif %}
+}
+
+private enum {{enumName}} {
+// Hint: to name 2 resources with the same name in different folders without colision,
+// check "Provides Namespace" in the xcasset folder attributes
+  {% if catalogs.count > 0 %}
+  {% for catalog in catalogs %}
+  enum {{catalog.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+    {% call enumBlock catalog.assets "  " %}
+  }
+  {% endfor %}
+  {% endif %}
+}
+
+private struct {{colorType}} {
+  fileprivate(set) var name: String
+
+  var color: {{colorAlias}} {
+    let bundle = Bundle(for: BundleToken.self)
+    #if os(iOS) || os(tvOS)
+    let color = {{colorAlias}}(named: name, in: bundle, compatibleWith: nil)
+    #elseif os(watchOS)
+    let color = {{colorAlias}}(named: name)
+    #endif
+    guard let result = color else { fatalError("Unable to load color named \(name).") }
+    return result
+  }
+}
+
+private final class BundleToken {}
+{% else %}
+// No assets found
+{% endif %}

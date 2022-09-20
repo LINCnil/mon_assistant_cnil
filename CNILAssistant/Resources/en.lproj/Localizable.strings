@@ -1,0 +1,53 @@
+
+"alert_action_ok" = "OK";
+"alert_action_cancel" = "Cancel";
+
+"conversation_title" = "Search";
+"conversation_denied_record_audio_permission" = "Record Audio permission is required to use voice input";
+"conversation_nothing_found" = "Nothing found...";
+"conversation_rephrase_question" = "You can clarify or rephrase the question.";
+"conversation_welcome_title" = "Welcome to CNIL virtual assistant";
+"conversation_welcome_content" = "What do you want to start with?";
+"conversation_welcome_view_bookmarks_option" = "View my bookmarks";
+"conversation_welcome_news_option" = "Show latest news article";
+"conversation_input_view_placeholder" = "Enter your question";
+
+"conversation_update_model_available_title" = "New processing files are available";
+"conversation_update_model_available_message" = "Application files could be updated for better performance and greater knowledge. Would you like to update? It could take several minutes";
+"conversation_update_model_available_action_update" = "Update";
+"conversation_update_model_available_action_remind_later" = "Remind Later";
+"conversation_update_model_failed_title" = "Update failed";
+"conversation_update_model_failed_message" = "Something went wrong during the update";
+"conversation_updating_model_title" = "Updating...";
+"conversation_updating_model_message" = "This may take few minutes";
+
+"settings_title" = "Settings";
+"settings_voice_title" = "Voice";
+"settings_voice_option_male" = "Male";
+"settings_voice_option_female" = "Female";
+"settings_voice_speech_autostart" = "Speech autostart";
+"settings_voice_speak_full_article" = "Voice full article";
+"settings_audio_logs_title" = "Audio Logs";
+"settings_logs_title" = "Logs";
+"settings_about_section_title" = "About";
+"settings_about_app_version" = "App Version";
+"settings_about_model_version" = "Model Version";
+
+"bookmarks_title" = "Bookmarks";
+"bookmarks_no_items_title" = "No bookmarks";
+"bookmarks_no_items_message" = "You can add ones in article page view";
+
+"article_page_title" = "Article";
+"article_page_return_to_search" = "To review similar topics go back to the search results";
+
+"first_launch_start" = "Start";
+"first_launch_skip" = "Skip";
+"first_launch_next" = "Next";
+"first_launch_back" = "Back";
+"first_launch_done" = "Done";
+"first_launch_welcome_title" = "Welcome!";
+"first_launch_welcome_text" = "Hello, I am CNIL virtual assistant.\n\nIt’s your first launching. You can make quick application setup";
+"first_launch_assistant_voice_title" = "Assistant’s voice";
+"first_launch_assistant_voice_text" = "Choose a voice you would like to assistant will use";
+"first_launch_autospeech_title" = "Auto speech";
+"first_launch_autospeech_text" = "Articles can be voiced automatically";

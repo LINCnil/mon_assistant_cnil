@@ -1,0 +1,104 @@
+PODS:
+  - Action (4.3.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - Alamofire (5.4.2)
+  - CodableCSV (0.6.6)
+  - Differentiator (5.0.0)
+  - LicensePlist (3.0.7)
+  - ProgressHUD (13.6)
+  - RxBlocking (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
+  - RxTest (6.1.0):
+    - RxSwift (= 6.1.0)
+  - SFSafeSymbols (2.1.3)
+  - SnapKit (5.0.1)
+  - SwiftGen (6.4.0)
+  - SwiftLint (0.43.1)
+  - Swinject (2.7.1)
+  - TensorFlowLiteC (2.4.0):
+    - TensorFlowLiteC/Core (= 2.4.0)
+  - TensorFlowLiteC/Core (2.4.0)
+  - TensorFlowLiteSwift (2.4.0):
+    - TensorFlowLiteSwift/Core (= 2.4.0)
+  - TensorFlowLiteSwift/Core (2.4.0):
+    - TensorFlowLiteC (= 2.4.0)
+  - Zip (2.1.1)
+
+DEPENDENCIES:
+  - Action
+  - Alamofire (~> 5.2)
+  - CodableCSV (~> 0.6.5)
+  - LicensePlist
+  - ProgressHUD
+  - RxBlocking (~> 6)
+  - RxCocoa (~> 6)
+  - RxDataSources
+  - RxSwift (~> 6)
+  - RxTest (~> 6)
+  - SFSafeSymbols
+  - SnapKit
+  - SwiftGen
+  - SwiftLint
+  - Swinject
+  - TensorFlowLiteSwift (~> 2.4)
+  - Zip (~> 2.1)
+
+SPEC REPOS:
+  trunk:
+    - Action
+    - Alamofire
+    - CodableCSV
+    - Differentiator
+    - LicensePlist
+    - ProgressHUD
+    - RxBlocking
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
+    - RxSwift
+    - RxTest
+    - SFSafeSymbols
+    - SnapKit
+    - SwiftGen
+    - SwiftLint
+    - Swinject
+    - TensorFlowLiteC
+    - TensorFlowLiteSwift
+    - Zip
+
+SPEC CHECKSUMS:
+  Action: 9891cd1b0a9047557d7e58e8dfae743e19d08197
+  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
+  CodableCSV: 1050e7edbc866b99bc1c6856835ee7070039ef41
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  LicensePlist: 9f7b32ff4246f615723ccaca543c4e279cb867c3
+  ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
+  RxBlocking: 602095fba0bce7b16b56ccec89edf780c248b7d9
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  RxTest: 9d26616eaff4a7e75f4ecae9b2c24840f2e8218d
+  SFSafeSymbols: 1c2d431b9e5ed20cd92a4ac303427f780d3354a3
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
+  SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  TensorFlowLiteC: 09f8ac75a76caeadb19bcfa694e97454cc1ecf87
+  TensorFlowLiteSwift: f062dc1178120100d825d7799fd9f115b4a37fee
+  Zip: 414f59909701fda9a84ab774ebe0f5449b1082cc
+
+PODFILE CHECKSUM: 13f49e03836bdf41329b9c4b722195e31dd3f3f8
+
+COCOAPODS: 1.10.1

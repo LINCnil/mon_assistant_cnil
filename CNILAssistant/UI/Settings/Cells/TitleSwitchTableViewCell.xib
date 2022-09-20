@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="78" id="V10-PG-HmQ" customClass="TitleSwitchTableViewCell" customModule="CNILAssistant" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="78"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V10-PG-HmQ" id="AVm-dg-iti">
+                <rect key="frame" x="0.0" y="0.0" width="378" height="78"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlM-tI-9El">
+                        <rect key="frame" x="20" y="11" width="273" height="56"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GXa-tL-Vcd">
+                        <rect key="frame" x="309" y="23.5" width="51" height="31"/>
+                        <connections>
+                            <action selector="onValueChanged:" destination="V10-PG-HmQ" eventType="valueChanged" id="4bF-rF-Ceb"/>
+                        </connections>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dlM-tI-9El" firstAttribute="top" secondItem="AVm-dg-iti" secondAttribute="topMargin" id="Fy1-WH-Iot"/>
+                    <constraint firstItem="GXa-tL-Vcd" firstAttribute="leading" secondItem="dlM-tI-9El" secondAttribute="trailing" constant="16" id="Lqt-r2-Jn7"/>
+                    <constraint firstItem="GXa-tL-Vcd" firstAttribute="centerY" secondItem="dlM-tI-9El" secondAttribute="centerY" id="QgN-15-MGs"/>
+                    <constraint firstItem="dlM-tI-9El" firstAttribute="leading" secondItem="AVm-dg-iti" secondAttribute="leadingMargin" id="Yry-pI-OiV"/>
+                    <constraint firstItem="dlM-tI-9El" firstAttribute="bottom" secondItem="AVm-dg-iti" secondAttribute="bottomMargin" id="Z4a-Zf-6Nk"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="GXa-tL-Vcd" secondAttribute="trailing" id="pEs-eJ-n1m"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" name="Background"/>
+            <connections>
+                <outlet property="titleLabel" destination="dlM-tI-9El" id="yVy-3Y-VyF"/>
+                <outlet property="valueSwitch" destination="GXa-tL-Vcd" id="YE0-oY-eHz"/>
+            </connections>
+            <point key="canvasLocation" x="155" y="105"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

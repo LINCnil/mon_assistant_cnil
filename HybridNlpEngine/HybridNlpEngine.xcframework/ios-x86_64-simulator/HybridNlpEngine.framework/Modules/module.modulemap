@@ -1,0 +1,11 @@
+framework module HybridNlpEngine {
+  umbrella header "HybridNlpEngine.h"
+
+  export *
+  module * { export * }
+}
+
+module HybridNlpEngine.Swift {
+    header "HybridNlpEngine-Swift.h"
+    requires objc
+}

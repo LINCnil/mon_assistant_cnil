@@ -1,0 +1,54 @@
+
+
+"alert_action_ok" = "OK";
+"alert_action_cancel" = "Annuler";
+
+"conversation_title" = "Rechercher";
+"conversation_denied_record_audio_permission" = "L'autorisation d'enregistrement audio est requise pour utiliser la saisie vocale";
+"conversation_nothing_found" = "Rien trouvé...";
+"conversation_rephrase_question" = "Vous pouvez clarifier ou reformuler la question.";
+"conversation_welcome_title" = "Bienvenue à l'assistant virtuel de la CNIL";
+"conversation_welcome_content" = "Par quoi voulez-vous commencer?";
+"conversation_welcome_view_bookmarks_option" = "Afficher mes favoris";
+"conversation_welcome_news_option" = "Afficher le dernier article de presse";
+"conversation_input_view_placeholder" = "Saisissez votre question";
+
+"conversation_update_model_available_title" = "De nouveaux fichiers de traitement sont disponibles";
+"conversation_update_model_available_message" = "Les fichiers d\'application pourraient être mis à jour pour de meilleures performances et une meilleure connaissance. Voulez-vous mettre à jour? Cela peut prendre plusieurs minutes";
+"conversation_update_model_available_action_update" = "Mettre à jour";
+"conversation_update_model_available_action_remind_later" = "Rappeler plus tard";
+"conversation_update_model_failed_title" = "La mise à jour a échoué";
+"conversation_update_model_failed_message" = "Une erreur s\'est produite lors de la mise à jour";
+"conversation_updating_model_title" = "Mise à jour...";
+"conversation_updating_model_message" = "Cela peut prendre quelques minutes";
+
+"settings_title" = "Réglages";
+"settings_voice_title" = "Voix";
+"settings_voice_option_male" = "Homme";
+"settings_voice_option_female" = "Femme";
+"settings_voice_speech_autostart" = "Automatique de la parole";
+"settings_voice_speak_full_article" = "Article complet de la voix";
+"settings_audio_logs_title" = "Journaux audio";
+"settings_logs_title" = "Journaux";
+"settings_about_section_title" = "À propos";
+"settings_about_app_version" = "Version de l\'application";
+"settings_about_model_version" = "Version du modèle";
+
+"bookmarks_title" = "Signets";
+"bookmarks_no_items_title" = "Aucun signet";
+"bookmarks_no_items_message" = "Vous pouvez en ajouter dans la vue de la page de l'article";
+
+"article_page_title" = "Article";
+"article_page_return_to_search" = "Pour consulter des sujets similaires, revenez aux résultats de la recherche";
+
+"first_launch_start" = "Démarrer";
+"first_launch_skip" = "Ignorer";
+"first_launch_next" = "Suivant";
+"first_launch_back" = "Retour";
+"first_launch_done" = "Terminé";
+"first_launch_welcome_title" = "Bienvenue!";
+"first_launch_welcome_text" = "Bonjour, je suis l'assistant virtuel de la CNIL.\n\nC'est votre premier lancement. Vous pouvez effectuer une configuration rapide de l'application";
+"first_launch_assistant_voice_title" = "Voix de l\'assistant";
+"first_launch_assistant_voice_text" = "Choisissez une voix que l\'assistant utilisera";
+"first_launch_autospeech_title" = "Voix automatique";
+"first_launch_autospeech_text" = "Les articles peuvent être exprimés automatiquement";

@@ -1,0 +1,23 @@
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Server Host
+SERVER_HOST = 
+
+// Server Port
+SERVER_PORT = 
+
+// Server URL
+SERVER_URL = https:/$()/$(SERVER_HOST):$(SERVER_PORT)
+
+// Client SSL certificate file name
+CLIENT_CERTIFICATE_FILE_NAME = 
+
+// Client SSL certificate passphrase HEX
+// To avoid using string literal contains sensetive information, using AES encrypted byte array
+// To produce byte array for new password, use following call
+// print(AESEncryption.encrypt(data: "SomeNewPassword".data(using: .utf8)!).map { String(format: "%02x", $0) }.joined())
+CLIENT_CERTIFICATE_PASSPHRASE_HEX = 
+
+// Supported Model Architecture Version
+SUPPORTED_ARCH_MODEL_VERSION = 1.2

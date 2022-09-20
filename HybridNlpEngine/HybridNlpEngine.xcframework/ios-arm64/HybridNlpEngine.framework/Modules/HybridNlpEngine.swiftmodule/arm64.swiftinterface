@@ -1,0 +1,37 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name HybridNlpEngine
+import Foundation
+@_exported import HybridNlpEngine
+import Swift
+import TensorFlowLite
+public enum ClassifierError : Swift.Error {
+  case fileNotFound(name: Swift.String)
+  case invalidFileFormat(name: Swift.String)
+  case invalidCountOfClasses(count: Swift.Int, expected: Swift.Int)
+  case unexpectedClassIndex(index: Swift.Int)
+  case invalidClassName
+  case noWordsInText(text: Swift.String)
+  case noResults(text: Swift.String)
+}
+final public class HybridTextClassifierImplemention : HybridNlpEngine.TextClassifier {
+  public init(modelFileUrl: Foundation.URL, tokensMapFileUrl: Foundation.URL, stopwordsFileUrl: Foundation.URL, keywordsFileUrl: Foundation.URL, classesMapFileUrl: Foundation.URL, crunchFileUrl: Foundation.URL, config: HybridNlpEngine.HybridTextClassifierConfiguration, tokenizer: HybridNlpEngine.Tokenizer, locale: Foundation.Locale, processLogger: HybridNlpEngine.ProcessLogger?) throws
+  final public func classify(text: Swift.String, completion: @escaping (Swift.Result<[Swift.Int], Swift.Error>) -> Swift.Void)
+  @objc deinit
+}
+public struct HybridTextClassifierConfiguration {
+  public init(maximumResultCount: Swift.Int)
+  public let maximumResultCount: Swift.Int
+  public let maximumTFTokens: Swift.Int
+  public let maximumTFResultCount: Swift.Int
+  public let maximumKWResultCount: Swift.Int
+}
+public protocol Tokenizer {
+  func tokenize(text: Swift.String) -> [Swift.String]
+}
+public protocol ProcessLogger {
+  func log(entry: Swift.String)
+}
+public protocol TextClassifier {
+  func classify(text: Swift.String, completion: @escaping (Swift.Result<[Swift.Int], Swift.Error>) -> Swift.Void)
+}

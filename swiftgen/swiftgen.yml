@@ -1,0 +1,20 @@
+input_dir: ${PROJECT_DIR}/${TARGET_NAME}/Resources/
+output_dir: ${PROJECT_DIR}/${TARGET_NAME}/UI/Generated/
+strings:
+  inputs: en.lproj
+  outputs:
+    - templateName: structured-swift5
+      params:
+        publicAccess: true
+      output: LocalizedStrings.swift
+xcassets:
+  - inputs:
+      - Images.xcassets
+    outputs:
+      - templatePath: ${PROJECT_DIR}/swiftgen/swiftgen_xcassets_images.stencil
+        output: Images.swift
+  - inputs:
+      - Colors.xcassets
+    outputs:
+      - templatePath: ${PROJECT_DIR}/swiftgen/swiftgen_xcassets_colors.stencil
+        output: Colors.swift
