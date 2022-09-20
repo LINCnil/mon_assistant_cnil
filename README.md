@@ -27,10 +27,8 @@ La fonctionnalité STT est présentée dans l'application sous la forme d'une bi
 
 La bibliothèque STT comprend des méthodes d'initialisation et d'inférence de modèle.
 
-L'initialisation de la partie STT vise à préparer le modèle pour une interaction future. À ce stade:
-
+L'initialisation de la partie STT vise à préparer le modèle pour une interaction future: 
 * l'application charge les données du fichier kenlm.scorer (initialisation du modèle linguistique)
-
 * deepspeech-models.tflite (initialisation du modèle acoustique)
 
 Dans l'étape d'inférence, le modèle Tensor Flow Lite traite l'entrée au format d'un fichier audio ou d'un flux audio. La sortie du résultat est un texte reconnu. La sortie de la partie STT est considérée comme une entrée pour le module NLP dans le pipeline de traitement.
@@ -38,11 +36,10 @@ Dans l'étape d'inférence, le modèle Tensor Flow Lite traite l'entrée au form
 
 La fonctionnalité NLP est présentée dans l'application sous la forme d'un modèle de classificateur d'intention TensorFlow Lite (initialisation, inférence) et d'un ensemble de méthodes de prétraitement et de post-traitement.
 
-L'initialisation de la partie NLP vise à préparer le modèle pour une interaction future avec le modèle. À ce stade:
-
-    l'application charge les données du fichier clases_map.txt (pour obtenir la dépendance entre les classes de modèles NLP et les questions/réponses dans le champ d'application)
-    fichier vocab.txt (pour obtenir tous les mots possibles des questions en question)
-    tflite (initialisation du modèle lui-même)
+L'initialisation de la partie NLP vise à préparer le modèle pour une interaction future avec le modèle:
+* l'application charge les données du fichier clases_map.txt (pour obtenir la dépendance entre les classes de modèles NLP et les questions/réponses dans le champ d'application)
+* le fichier vocab.txt (pour obtenir tous les mots possibles des questions en question)
+* le fichier tflite (initialisation du modèle lui-même)
 
 Au cours de la partie de prétraitement, les données d'entrée (texte) sont converties au format adapté au modèle Tensor Flow Lite. Cela se fait en utilisant la segmentation de la chaîne d'entrée afin que la chaîne initiale soit divisée en mots séparés. Chacun de ces mots (jetons) est mappé sur le chiffre de 4 octets. Ce vecteur a une longueur fixe de 120 octets (de sorte qu'il représente 30 mots ou des espaces réservés vides) et est utilisé comme entrée du modèle Tensor Flow Lite.
 
@@ -64,10 +61,10 @@ Installez Android Studio et ouvrez le projet  via le menu "Fichier" -> "Ouvrir" 
 
 Installez le SDK Android et les plugins requis. Configuration cible :
 
-    Plate-forme SDK Android 11.0 (API niveau 30)
-    Outils de construction du SDK Android 31-rc1
-    Plate-forme Android SDK-Outils v30.0.5
-    Plugin Kotlin (version 1.4.31-release-Studio4.1-1)
+Plate-forme SDK Android 11.0 (API niveau 30)
+Outils de construction du SDK Android 31-rc1
+Plate-forme Android SDK-Outils v30.0.5
+Plugin Kotlin (version 1.4.31-release-Studio4.1-1)
 
 D'autres configurations sont possibles mais peuvent nécessiter des étapes supplémentaires ou des changements de procédure par rapport à l'instruction actuelle.
 
@@ -77,11 +74,11 @@ Effectuez l'opération "Synchroniser le projet avec les fichiers Gradle" en sél
 
 Si de nouveaux fichiers de modèle de Skill Tool doivent être intégrés dans une nouvelle version d'Android, les étapes suivantes sont nécessaires :
 
-    Obtenez une archive zip de modèle avec des modèles de Skill Tool
+Obtenez une archive zip de modèle avec des modèles de Skill Tool
 
-    Décompressez l'archive de l'étape 1.
+Décompressez l'archive de l'étape 1.
 
-    Ouvrez le dossier décompressé à l'étape 2.
+Ouvrez le dossier décompressé à l'étape 2.
 
     Vérifiez que la version de l'architecture spécifiée dans le fichier "version.txt" (par exemple, v1.1_update_21-04-08_11-58-24, où "1.1" est la version de l'architecture) correspond à la version spécifiée dans l'application dans le fichier CNIL_Client_Android\app\src\main\java\com\cnil\assistant\utils\Constants.java, champ constant SUPPORTED_ARCHITECTURE_VERSION (par exemple public static final double SUPPORTED_ARCHITECTURE_VERSION = 1.1 ;)
 
