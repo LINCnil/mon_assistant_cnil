@@ -44,11 +44,10 @@ Dans l'étape d'inférence, le modèle Tensor Flow Lite traite l'entrée au form
 
 La fonctionnalité NLP est présentée dans l'application sous la forme d'un modèle de classificateur d'intention TensorFlow Lite (initialisation, inférence) et d'un ensemble de méthodes de prétraitement et de post-traitement.
 
-L'initialisation de la partie NLP vise à préparer le modèle pour une interaction future avec le modèle. À ce stade:
-
-    l'application charge les données du fichier clases_map.txt (pour obtenir la dépendance entre les classes de modèles NLP et les questions/réponses dans le champ d'application)
-    fichier vocab.txt (pour obtenir tous les mots possibles des questions en question)
-    tflite (initialisation du modèle lui-même)
+L'initialisation de la partie NLP vise à préparer le modèle pour une interaction future avec le modèle. 
+* l'application charge les données du fichier clases_map.txt (pour obtenir la dépendance entre les classes de modèles NLP et les questions/réponses dans le champ d'application)
+* le fichier vocab.txt (pour obtenir tous les mots possibles des questions)
+* le fichier tflite (initialisation du modèle)
 
 Au cours de la partie de prétraitement, les données d'entrée (texte) sont converties au format adapté au modèle Tensor Flow Lite. Cela se fait en utilisant la segmentation de la chaîne d'entrée afin que la chaîne initiale soit divisée en mots séparés. Chacun de ces mots (jetons) est mappé sur le chiffre de 4 octets. Ce vecteur a une longueur fixe de 120 octets (de sorte qu'il représente 30 mots ou des espaces réservés vides) et est utilisé comme entrée du modèle Tensor Flow Lite.
 
