@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_2">2sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+
+    <dimen name="first_setup_button_width">196dp</dimen>
+    <dimen name="first_setup_radio_button_linear_layout_width">128dp</dimen>
+    <dimen name="first_setup_margin_8">8dp</dimen>
+    <dimen name="first_setup_margin_24">24dp</dimen>
+    <dimen name="first_setup_margin_32">32dp</dimen>
+    <dimen name="first_setup_margin_48">48dp</dimen>
+    <dimen name="first_setup_margin_56">56dp</dimen>
+    <dimen name="first_setup_view_pager_dot_size">4dp</dimen>
+
+    <dimen name="divider_view_height">1dp</dimen>
+    <dimen name="border_view_width">1dp</dimen>
+
+    <dimen name="chat_view_corner_radius">8dp</dimen>
+
+    <dimen name="button_border_width">1dp</dimen>
+    <dimen name="button_corner_radius">8dp</dimen>
+    <dimen name="blue_button_corner_radius">4dp</dimen>
+
+    <dimen name="conversation_view_margin_4">4dp</dimen>
+    <dimen name="conversation_view_margin_8">8dp</dimen>
+    <dimen name="conversation_view_margin_12">12dp</dimen>
+    <dimen name="conversation_view_margin_16">16dp</dimen>
+    <dimen name="conversation_view_margin_20">20dp</dimen>
+    <dimen name="conversation_view_margin_32">32dp</dimen>
+    <dimen name="conversation_send_button_size">24dp</dimen>
+    <dimen name="conversation_view_shadow_elevation">4dp</dimen>
+    <dimen name="conversation_control_view_shadow_elevation">5dp</dimen>
+
+    <dimen name="debug_log_info_view_holder_margin_horizontal">8dp</dimen>
+    <dimen name="control_view_button_height">56dp</dimen>
+
+    <dimen name="settings_list_item_height">56dp</dimen>
+</resources>

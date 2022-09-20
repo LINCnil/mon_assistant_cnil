@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/answer_background"
+    tools:context=".ui.DebugInfoFragment">
+
+    <Button
+        android:id="@+id/debug_info_export_logs_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/conversation_view_margin_8"
+        android:text="@string/debug_info_export_logs"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/debug_info_clear_logs_button"
+        style="@style/WhiteOutlinedButton" />
+
+    <Button
+        android:id="@+id/debug_info_clear_logs_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/conversation_view_margin_8"
+        android:text="@string/debug_info_clear_logs"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/debug_info_export_logs_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/WhiteOutlinedButton" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/debug_info_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/conversation_view_margin_8"
+        app:layout_constraintTop_toBottomOf="@+id/debug_info_export_logs_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

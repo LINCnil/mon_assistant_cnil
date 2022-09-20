@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/conversation_background"
+    tools:context=".ui.ConversationFragment"
+    tools:ignore="Overdraw">
+
+    <RelativeLayout
+        android:id="@+id/header_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/answer_background"
+        android:elevation="@dimen/conversation_control_view_shadow_elevation"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/settings_button"
+            android:layout_width="@dimen/control_view_button_height"
+            android:layout_height="@dimen/control_view_button_height"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="center"
+            android:src="@drawable/ic_settings"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/cnil_emblem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_cnil_emblem"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_view_height"
+            android:layout_alignBottom="@id/settings_button"
+            android:background="@color/divider_background"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/cnil_start_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/conversation_view_margin_16"
+        android:layout_marginHorizontal="@dimen/conversation_view_margin_8"
+        android:paddingTop="@dimen/conversation_view_margin_16"
+        android:paddingHorizontal="@dimen/conversation_view_margin_12"
+        android:gravity="center_horizontal"
+        android:elevation="@dimen/conversation_view_shadow_elevation"
+        android:background="@drawable/chat_view_background"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/header_relative_layout"
+        app:layout_constraintBottom_toTopOf="@id/control_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/conversation_view_margin_12"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/text_size_14"
+            android:text="@string/welcome_hello" />
+
+        <Button
+            android:id="@+id/start_view_what_is_cnil_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/conversation_view_margin_12"
+            android:layout_marginTop="@dimen/conversation_view_margin_8"
+            android:text="@string/quick_button_learn_more_about_cnil"
+            style="@style/WhiteOutlinedButton" />
+
+        <Button
+            android:id="@+id/start_view_bookmarks_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/conversation_view_margin_12"
+            android:layout_marginTop="@dimen/conversation_view_margin_8"
+            android:text="@string/quick_button_bookmarks"
+            style="@style/WhiteOutlinedButton" />
+
+        <Button
+            android:id="@+id/start_view_news_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/conversation_view_margin_12"
+            android:layout_marginTop="@dimen/conversation_view_margin_8"
+            android:layout_marginBottom="@dimen/conversation_view_margin_16"
+            android:text="@string/quick_button_news"
+            style="@style/WhiteOutlinedButton" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/conversation_view_margin_8"
+        app:layout_constraintTop_toBottomOf="@+id/header_relative_layout"
+        app:layout_constraintBottom_toTopOf="@id/control_view" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/progress_details_bottom_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/conversation_view_margin_8"
+        android:layout_marginBottom="@dimen/conversation_view_margin_12"
+        android:background="@color/conversation_background"
+        android:paddingVertical="@dimen/conversation_view_margin_12"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/control_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/request_details_bar_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/progress_details_bottom_bar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/text_size_16"
+                android:text="@string/answer_progress_initializing" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/control_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/answer_background"
+        android:elevation="@dimen/conversation_control_view_shadow_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_view_height"
+            android:background="@color/divider_background"/>
+
+        <RelativeLayout
+            android:id="@+id/bottom_bar_text_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/conversation_view_margin_8"
+            android:layout_marginHorizontal="@dimen/conversation_view_margin_12"
+            android:background="@color/answer_background"
+            android:visibility="gone">
+
+            <com.cnil.assistant.ui.view.CustomEditText
+                android:id="@+id/utterance_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/send_text_image_button"
+                android:layout_marginHorizontal="@dimen/conversation_view_margin_12"
+                android:inputType="textAutoCorrect|textMultiLine"
+                android:minLines="1"
+                android:lines="10"
+                android:textSize="@dimen/text_size_16"
+                android:textColor="@color/main_text"
+                android:background="@android:color/transparent"
+                android:hint="@string/enter_your_question_hint"
+                android:textColorHint="@color/icons_tint_color" />
+
+            <ImageButton
+                android:id="@+id/send_text_image_button"
+                android:layout_width="@dimen/conversation_send_button_size"
+                android:layout_height="@dimen/conversation_send_button_size"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="@dimen/conversation_view_margin_12"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"
+                android:src="@drawable/ic_send_button"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_view_height"
+            android:background="@color/divider_background"/>
+
+        <RelativeLayout
+            android:id="@+id/bottom_bar_mic_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/answer_background"
+            android:layout_marginVertical="@dimen/conversation_view_margin_12">
+
+            <ImageButton
+                android:id="@+id/bookmarks_button"
+                android:layout_width="@dimen/control_view_button_height"
+                android:layout_height="@dimen/control_view_button_height"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/record_button"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="center"
+                android:src="@drawable/ic_bookmarks"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:id="@+id/record_button"
+                android:layout_width="@dimen/control_view_button_height"
+                android:layout_height="@dimen/control_view_button_height"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_record_button"
+                android:scaleType="center"
+                android:src="@drawable/ic_mic"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:id="@+id/keyboard_button"
+                android:layout_width="@dimen/control_view_button_height"
+                android:layout_height="@dimen/control_view_button_height"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/record_button"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="center"
+                android:src="@drawable/ic_keyboard"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

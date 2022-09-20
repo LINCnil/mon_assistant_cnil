@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="conversation_background">#000000</color>
+    <color name="answer_background">#262626</color>
+    <color name="primary_blue">#4D9EF4</color>
+    <color name="secondary_blue">#3B3F43</color>
+    <color name="divider_background">#3B3F43</color>
+    <color name="ic_back_button_tint_color">#999999</color>
+    <color name="icons_tint_color">#BFBFBF</color>
+    <color name="main_text">#BFBFBF</color>
+    <color name="secondary_text">#999999</color>
+    <color name="additional_text">#808080</color>
+    <color name="round_button_pressed_background">#333333</color>
+</resources>

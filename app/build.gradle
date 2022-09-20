@@ -1,0 +1,114 @@
+plugins {
+    id 'com.android.application'
+    id "com.cmgapps.licenses"
+    id "com.github.kkdad.dependency-license-report"
+}
+apply plugin: 'kotlin-android'
+apply plugin: "androidx.navigation.safeargs"
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.cnil.assistant"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 52
+        versionName "00.00.052"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions 'version'
+    productFlavors {
+        dev {
+            dimension = 'version'
+            applicationIdSuffix = '.dev'
+            buildConfigField 'boolean', 'DEV', 'true'
+        }
+        prod {
+            dimension = 'version'
+            buildConfigField 'boolean', 'DEV', 'false'
+        }
+    }
+
+    aaptOptions {
+        noCompress "lite"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def names = variant.getFlavorName()
+            def flavor = ""
+            if (names.contains("dev")) {
+                flavor = "_dev"
+            }
+            def fileName = "CNIL_VA" + "_" + defaultConfig.versionName + flavor + ".apk"
+            outputFileName = fileName
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+        quiet true
+        lintConfig file("./lint.xml")
+        disable "UnsafeExperimentalUsageError",
+                "UnsafeExperimentalUsageWarning"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+dependencies {
+    def nav_version = "2.3.5"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation "androidx.core:core-ktx:1.3.2"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.3.1"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'org.jetbrains:annotations:15.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.31"
+    implementation 'com.squareup.okhttp3:okhttp:4.4.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    testImplementation 'org.mockito:mockito-core:2.28.2'
+
+    implementation("com.google.guava:guava:29.0-jre")
+    implementation 'org.tensorflow:tensorflow-lite:2.4.0'
+    implementation ('org.tensorflow:tensorflow-lite-metadata:0.0.0-nightly') { changing = true }
+    implementation(name:'libdeepspeech-0.9.3-release', ext:'aar')
+
+    implementation(name:'HybridNlpEngine-release', ext:'aar')
+}
+
+repositories {
+    maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+    mavenCentral()
+}

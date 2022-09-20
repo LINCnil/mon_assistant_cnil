@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/conversation_view_margin_8">
+
+    <TextView
+        android:id="@+id/answer_variant_request_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/conversation_view_margin_4"
+        android:paddingHorizontal="@dimen/conversation_view_margin_12"
+        android:textColor="@color/main_text"
+        android:textSize="@dimen/text_size_14"
+        android:textStyle="bold|italic"
+        android:maxLines="2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/answer_variant_response_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/conversation_view_margin_4"
+        android:paddingHorizontal="@dimen/conversation_view_margin_12"
+        android:textColor="@color/main_text"
+        android:textSize="@dimen/text_size_14"
+        android:maxLines="2"
+        app:layout_constraintTop_toBottomOf="@+id/answer_variant_request_text_view"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/id_request_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/conversation_view_margin_12"
+        android:textColor="@android:color/transparent"
+        android:textSize="@dimen/text_size_2"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/answer_variant_divider_view"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/answer_variant_divider_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_view_height"
+        android:layout_marginBottom="@dimen/conversation_view_margin_4"
+        android:background="@color/divider_background"
+        app:layout_constraintTop_toBottomOf="@id/answer_variant_response_text_view"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

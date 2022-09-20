@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">CNILassistant</string>
+    <string name="denied_record_audio_permission">L\'autorisation d\'enregistrement audio est requise pour utiliser la saisie vocale</string>
+
+    <string name="answer_progress_initializing">Initialisation…</string>
+    <string name="answer_progress_listening">Écoute…</string>
+    <string name="answer_progress_processing">Traitement…</string>
+    <string name="enter_your_question_hint">Saisissez votre question</string>
+
+    <string name="quick_button_learn_more_about_cnil">La CNIL, c\'est quoi?</string>
+    <string name="quick_button_bookmarks">Afficher mes favoris</string>
+    <string name="quick_button_news">Afficher le dernier article de presse</string>
+    <string name="you_can_clarify_or_rephrase_the_question">Vous pouvez clarifier ou reformuler la question</string>
+    <string name="nothing_found">Rien trouvé…</string>
+
+    <!-- Article Fragment -->
+    <string name="article_header">Article</string>
+    <string name="article_similar_options">Pour passer en revue des sujets similaires, passez à l\'écran précédent</string>
+
+    <!-- Article Fragment -->
+    <string name="bookmarks_header">Signets</string>
+    <string name="bookmarks_no_bookmarks">Aucun signet</string>
+    <string name="bookmarks_no_bookmarks_text">Vous pouvez en ajouter dans la vue de page d\'article</string>
+
+    <string name="welcome">Bienvenue</string>
+    <string name="first_time_launch_text">Bonjour, je suis l\'assistant virtuel de la CNIL.\n\nC\'est votre premier lancement. Vous pouvez configurer rapidement l\'application</string>
+    <string name="skip_button">Ignorer</string>
+    <string name="start_button">Démarrer</string>
+    <string name="next_button">Suivant</string>
+    <string name="back_button">Retour</string>
+    <string name="done_button">Terminé</string>
+    <string name="welcome_hello"><b>Bienvenue à l\'assistant virtuel de la CNIL</b>\n\nPar quoi voulez-vous commencer?</string>
+
+    <!-- Update dialogs -->
+    <string name="progress_dialog_header">Mise à jour…</string>
+    <string name="progress_dialog_message">Cela peut prendre quelques minutes</string>
+    <string name="update_dialog_header">De nouveaux fichiers de traitement sont disponibles</string>
+    <string name="update_dialog_message">Les fichiers d\'application pourraient être mis à jour pour de meilleures performances et une meilleure connaissance. Voulez-vous mettre à jour? Cela peut prendre plusieurs minutes</string>
+    <string name="update_dialog_positive_button">Mettre à jour</string>
+    <string name="update_dialog_negative_button">Rappeler plus tard</string>
+    <string name="ok_button">OK</string>
+    <string name="try_again_button">Réessayer</string>
+    <string name="update_failure_dialog_header">La mise à jour a échoué</string>
+    <string name="update_failure_dialog_message">Une erreur s\'est produite lors de la mise à jour</string>
+
+    <!-- Debug info Fragment -->
+    <string name="debug_info_clear_logs">Effacer les journaux</string>
+    <string name="debug_info_export_logs">Exporter les journaux</string>
+
+    <!-- Settings -->
+    <string name="settings_header">Settings</string>
+    <string name="settings_section_assistant_speech">Voice</string>
+    <string name="settings_section_assistant_auto_start_speech_description">Discours de l\'assistant</string>
+    <string name="settings_section_assistant_auto_start_speech_duration">Durée du démarrage automatique de la parole</string>
+    <string name="settings_section_assistant_auto_start_speech_full">Article complet</string>
+    <string name="settings_section_assistant_auto_start_speech_short">1 phrase</string>
+    <string name="settings_section_voice_male">Male</string>
+    <string name="settings_section_voice_female">Female</string>
+    <string name="settings_section_recording">Enregistrement audio</string>
+    <string name="settings_section_recording_off">Désactivé</string>
+    <string name="settings_section_recording_on">Activé</string>
+    <string name="settings_section_log">Log</string>
+    <string name="settings_section_about_header">À propos</string>
+    <string name="settings_section_app_version_header">Version de l\'application</string>
+    <string name="settings_section_model_version_header">Version du modèle</string>
+
+    <!-- First Launch Settings Setup -->
+    <string name="first_launch_settings_assistants_voice">Voix de l\'assistant</string>
+    <string name="first_launch_settings_assistants_voice_choice_text">Choisissez une voix que l\'assistant utilisera</string>
+    <string name="first_launch_settings_assistants_auto_speech">Voix automatique</string>
+    <string name="first_launch_settings_assistants_auto_speech_text">Les articles peuvent être exprimés automatiquement</string>
+    <string name="first_launch_settings_assistants_auto_speech_auto_start">Démarrage automatique de la parole</string>
+    <string name="first_launch_settings_assistants_auto_speech_full_article">Article complet sur la voix</string>
+
+</resources>

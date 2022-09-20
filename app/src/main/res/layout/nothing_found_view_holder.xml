@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/conversation_view_margin_16"
+    android:paddingVertical="@dimen/conversation_view_margin_16"
+    android:elevation="@dimen/conversation_view_shadow_elevation"
+    android:adjustViewBounds="true"
+    android:background="@drawable/chat_view_background">
+
+    <ImageView
+        android:id="@+id/nothing_found_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_nothing_found"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/nothing_found_title"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/nothing_found_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/conversation_view_margin_8"
+        android:textSize="@dimen/text_size_14"
+        android:text="@string/nothing_found"
+        android:textStyle="bold|italic"
+        android:textColor="@color/main_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nothing_found_image_view"
+        app:layout_constraintBottom_toTopOf="@id/nothing_found_description"/>
+
+    <TextView
+        android:id="@+id/nothing_found_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/conversation_view_margin_16"
+        android:textAlignment="center"
+        android:textColor="@color/main_text"
+        android:text="@string/you_can_clarify_or_rephrase_the_question"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nothing_found_title"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

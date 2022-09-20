@@ -1,0 +1,56 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="22dp"
+    android:height="17dp"
+    android:viewportWidth="22"
+    android:viewportHeight="17">
+    <path
+        android:pathData="M4 4H6V6H4V4Z"
+        android:fillColor="@color/icons_tint_color"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="M7 4H9V6H7V4Z"
+        android:fillColor="@color/icons_tint_color"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="M10 4H12V6H10V4Z"
+        android:fillColor="@color/icons_tint_color"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="M13 4H15V6H13V4Z"
+        android:fillColor="@color/icons_tint_color"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="M16 4H18V6H16V4Z"
+        android:fillColor="@color/icons_tint_color"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="M4 7H6V9H4V7Z"
+        android:fillColor="@color/icons_tint_color"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="M7 7H9V9H7V7Z"
+        android:fillColor="@color/icons_tint_color"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="M10 7H12V9H10V7Z"
+        android:fillColor="@color/icons_tint_color"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="M13 7H15V9H13V7Z"
+        android:fillColor="@color/icons_tint_color"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="M16 7H18V9H16V7Z"
+        android:fillColor="@color/icons_tint_color"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="M7 11H15V13H7V11Z"
+        android:fillColor="@color/icons_tint_color"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="M3 0C1.34314 0 0 1.34315 0 3V14C0 15.6569 1.34314 17 3 17H19C20.6569 17 22 15.6569 22 14V3C22 1.34315 20.6569 0 19 0H3ZM2 3C2 2.44772 2.44772 2 3 2H19C19.5523 2 20 2.44772 20 3V14C20 14.5523 19.5523 15 19 15H3C2.44772 15 2 14.5523 2 14V3Z"
+        android:fillColor="@color/icons_tint_color"
+        android:fillType="evenOdd"
+        tools:ignore="VectorRaster" />
+</vector>

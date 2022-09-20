@@ -1,0 +1,11 @@
+{
+    "id": "85",
+    "uri": "/selfcnil/api/configuration/site/document/85/content",
+    "contents": [
+        {
+            "locale": "fr_FR",
+            "content": "Dans votre situation, la CNIL ne peut pas intervenir. <span style=\"color:#2179c4;\"><strong>Une liquidation judiciaire n'a pas pour conséquence d'entraîner la levée de&nbsp;l'inscription au FICP</strong></span>.<br />\r\n<br />\r\nEn effet, un entrepreneur individuel qui rencontre des difficultés dans le cadre de son activité professionnelle relève des procédures collectives concernant le règlement amiable des difficultés des entreprises et non&nbsp;des procédures de traitement du surendettement des particuliers.<br />\r\n<br />\r\nPour autant, les incidents de paiement caractérisés sur les crédits accordés à un entrepreneur individuel pour des besoins non professionnels, quand bien même ces emprunts auraient été souscrits afin d'aider son activité professionnelle en difficulté, doivent être déclarés au FICP.<br />\r\n<br />\r\nL'inscription au FICP est maintenue jusqu'au <span style=\"color:#2179c4;\"><strong>paiement intégral des sommes dues</strong></span> ou jusqu'à l'expiration du <span style=\"color:#2179c4;\"><strong>délai de conservation de cinq ans</strong></span>.",
+            "format": "text/html"
+        }
+    ]
+}

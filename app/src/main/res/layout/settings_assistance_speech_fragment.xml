@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/conversation_background"
+    tools:context=".ui.SettingsAssistantSpeechFragment">
+
+    <ImageView
+        android:id="@+id/back_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/conversation_view_margin_20"
+        android:src="@drawable/ic_back_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/settings_assistant_voice_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_section_assistant_speech"
+        android:textSize="@dimen/text_size_18"
+        android:textColor="@color/main_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/settings_assistant_voice_header_divider_view"
+        app:layout_constraintStart_toEndOf="@id/back_image_view" />
+
+    <View
+        android:id="@+id/settings_assistant_voice_header_divider_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_view_height"
+        android:background="@color/divider_background"
+        app:layout_constraintTop_toBottomOf="@id/back_image_view" />
+
+    <LinearLayout
+        android:id="@+id/settings_assistant_voice_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/settings_list_item_height"
+        android:layout_marginTop="@dimen/conversation_view_margin_16"
+        android:paddingVertical="@dimen/conversation_view_margin_12"
+        android:paddingHorizontal="@dimen/conversation_view_margin_16"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/settings_assistant_voice_header_divider_view"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_launch_settings_assistants_voice"
+            style="@style/SettingsItemHeader" />
+
+        <TextView
+            android:id="@+id/settings_assistant_voice_option_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_section_voice_female"
+            style="@style/SettingsItemOption"
+            tools:ignore="RelativeOverlap" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_assistant_voice_auto_start_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/settings_list_item_height"
+        android:layout_marginTop="@dimen/conversation_view_margin_16"
+        android:paddingVertical="@dimen/conversation_view_margin_12"
+        android:paddingHorizontal="@dimen/conversation_view_margin_16"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/settings_assistant_voice_linear_layout"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/settings_assistant_voice_auto_start_header_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_launch_settings_assistants_auto_speech_auto_start"
+            style="@style/SettingsItemHeader"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/settings_assistant_voice_auto_start_option_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_section_assistant_auto_start_speech_description"
+            style="@style/SettingsItemOption"
+            tools:ignore="RelativeOverlap"
+            app:layout_constraintTop_toBottomOf="@+id/settings_assistant_voice_auto_start_header_text_view"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/settings_assistant_voice_auto_start_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:theme="@style/SwitchStyle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/settings_assistant_voice_auto_start_duration_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/settings_list_item_height"
+        android:paddingVertical="@dimen/conversation_view_margin_12"
+        android:paddingHorizontal="@dimen/conversation_view_margin_16"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/settings_assistant_voice_auto_start_linear_layout"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_section_assistant_auto_start_speech_duration"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/SettingsItemHeader" />
+
+        <TextView
+            android:id="@+id/settings_assistant_voice_auto_start_duration_option_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_section_assistant_auto_start_speech_full"
+            style="@style/SettingsItemOption"
+            tools:ignore="RelativeOverlap" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

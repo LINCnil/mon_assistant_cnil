@@ -1,0 +1,116 @@
+{
+    "id": "62",
+    "uri": "/selfcnil/api/configuration/site/document/62",
+    "names": [
+        {
+            "name": "Le FNCI (Fichier des chèques irréguliers), c'est quoi ?",
+            "locale": "fr_FR"
+        }
+    ],
+    "metadata": [
+        {
+            "locale": "fr_FR",
+            "name": "description",
+            "property": null,
+            "content": "FNCI, chèque, vol, opposition, interdiction, commerçant, Banque de France"
+        }
+    ],
+    "content": {
+        "uri": "/selfcnil/api/configuration/site/document/62/content"
+    },
+    "creator": {
+        "uri": "/selfcnil/api/configuration/site/document/62/creator"
+    },
+    "creationDate": 1422985129000,
+    "lastModifier": {
+        "uri": "/selfcnil/api/configuration/site/document/62/lastModifier"
+    },
+    "lastModificationDate": 1531327306000,
+    "fields": [
+        {
+            "name": "Description",
+            "value": null,
+            "fieldType": "TEXT",
+            "fieldOrder": null,
+            "fieldLength": null,
+            "listOfValueId": null,
+            "visibleByAgent": null,
+            "visibleBySupervisor": null,
+            "visibleByExternalSpecialist": null,
+            "mandatoryForAgent": null,
+            "mandatoryForSupervisor": null,
+            "readonlyForAgent": null,
+            "readonlyForSupervisor": null,
+            "localisation": [
+                {
+                    "label": "Description",
+                    "value": "FNCI, chèque, vol, opposition, interdiction, commerçant, Banque de France",
+                    "locale": "fr_FR"
+                }
+            ]
+        },
+        {
+            "name": "OrderTemplate",
+            "value": "",
+            "fieldType": "STRING",
+            "fieldOrder": null,
+            "fieldLength": null,
+            "listOfValueId": null,
+            "visibleByAgent": null,
+            "visibleBySupervisor": null,
+            "visibleByExternalSpecialist": null,
+            "mandatoryForAgent": null,
+            "mandatoryForSupervisor": null,
+            "readonlyForAgent": null,
+            "readonlyForSupervisor": null,
+            "localisation": [
+                {
+                    "label": "Ordre d'affichage",
+                    "value": "",
+                    "locale": "fr_FR"
+                }
+            ]
+        }
+    ],
+    "hits": [
+        {
+            "locale": "fr_FR",
+            "hits": 177
+        }
+    ],
+    "ranks": [
+        {
+            "locale": "fr_FR",
+            "rank": 1.4566929133858268,
+            "count": 127
+        }
+    ],
+    "contacts": {
+        "uri": "/selfcnil/api/configuration/site/document/62/contacts"
+    },
+    "relatedDocuments": {
+        "uri": "/selfcnil/api/configuration/site/document/62/relatedDocuments"
+    },
+    "attachments": {
+        "uri": "/selfcnil/api/configuration/site/document/62/attachments"
+    },
+    "path": [
+        {
+            "id": "12",
+            "uri": "/selfcnil/api/configuration/site/documentGroup/12"
+        },
+        {
+            "id": "65",
+            "uri": "/selfcnil/api/configuration/site/documentGroup/65"
+        },
+        {
+            "id": "84",
+            "uri": "/selfcnil/api/configuration/site/documentGroup/84"
+        }
+    ],
+    "parentGroup": {
+        "id": "84",
+        "uri": "/selfcnil/api/configuration/site/documentGroup/84"
+    },
+    "publicationStatus": "None"
+}

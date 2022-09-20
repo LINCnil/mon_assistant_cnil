@@ -1,0 +1,11 @@
+{
+    "id": "62",
+    "uri": "/selfcnil/api/configuration/site/document/62/content",
+    "contents": [
+        {
+            "locale": "fr_FR",
+            "content": "Le FNCI est un fichier géré par la Banque de France. Ce fichier recense :\r\n<ul>\r\n\t<li>Les coordonnées bancaires des comptes chèques ouverts au nom de personnes <span style=\"color:#2179c4;\"><strong>interdites d'émettre des chèques</strong></span> ;</li>\r\n\t<li>Les coordonnées bancaires des <span style=\"color:#2179c4;\"><strong>comptes clôturés</strong></span> ;</li>\r\n\t<li>Les coordonnées bancaires des comptes pour lesquels une <span style=\"color:#2179c4;\"><strong>déclaration de perte ou de vol</strong></span> a été enregistrée auprès des services de police, de gendarmerie ou de l'établissement bancaire, et éventuellement les numéros des chèques concernés ;</li>\r\n\t<li>Des éléments d'identification sur les <span style=\"color:#2179c4;\"><strong>faux chèques</strong></span>.&nbsp;</li>\r\n</ul>\r\n<br />\r\nLa consultation de ce fichier permet notamment aux commerçants de vérifier la régularité des chèques présentés par leurs clients, à partir de la ligne de chiffres figurant en bas de chaque chèque.<br />\r\n<br />\r\n<span style=\"color:#ff5122;\"><strong>Pour en savoir plus </strong></span>: <a href=\"https://www.cnil.fr/fr/fnci-fichier-national-des-cheques-irreguliers\" target=\"_blank\">Le FNCI Fichier en fiche</a>",
+            "format": "text/html"
+        }
+    ]
+}

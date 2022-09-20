@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/conversation_background"
+    tools:context=".ui.SettingsAboutFragment">
+
+    <ImageView
+        android:id="@+id/back_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/conversation_view_margin_20"
+        android:src="@drawable/ic_back_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/settings_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_section_about_header"
+        android:textSize="@dimen/text_size_18"
+        android:textColor="@color/main_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/header_divider_view"
+        app:layout_constraintStart_toEndOf="@id/back_image_view" />
+
+    <View
+        android:id="@+id/header_divider_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_view_height"
+        android:background="@color/divider_background"
+        app:layout_constraintTop_toBottomOf="@id/back_image_view" />
+
+    <LinearLayout
+        android:id="@+id/settings_section_app_version_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/settings_list_item_height"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/conversation_view_margin_16"
+        android:paddingVertical="@dimen/conversation_view_margin_12"
+        android:paddingHorizontal="@dimen/conversation_view_margin_16"
+        app:layout_constraintTop_toBottomOf="@+id/header_divider_view"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_section_app_version_header"
+            style="@style/SettingsItemHeader" />
+
+        <TextView
+            android:id="@+id/settings_section_app_version_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SettingsItemOption"
+            tools:ignore="RelativeOverlap" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/settings_section_model_version_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/settings_list_item_height"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/conversation_view_margin_12"
+        android:paddingHorizontal="@dimen/conversation_view_margin_16"
+        app:layout_constraintTop_toBottomOf="@+id/settings_section_app_version_relative_layout"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_section_model_version_header"
+            style="@style/SettingsItemHeader" />
+
+        <TextView
+            android:id="@+id/settings_section_model_version_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SettingsItemOption"
+            tools:ignore="RelativeOverlap" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

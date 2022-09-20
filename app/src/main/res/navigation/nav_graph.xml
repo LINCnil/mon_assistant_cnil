@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/conversation_fragment">
+
+    <fragment
+        android:id="@+id/first_settings_fragment"
+        android:name="com.cnil.assistant.ui.FirstSettingsFragment"
+        android:label="first_settings_fragment"
+        tools:layout="@layout/first_settings_fragment">
+        <action
+            android:id="@+id/action_first_settings_to_conversation"
+            app:destination="@id/conversation_fragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_first_settings_to_setup"
+            app:destination="@id/first_settings_setup_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/first_settings_setup_fragment"
+        android:name="com.cnil.assistant.ui.FirstSettingsSetupFragment"
+        android:label="first_settings_setup_fragment"
+        tools:layout="@layout/first_settings_setup_fragment">
+        <action
+            android:id="@+id/action_first_settings_setup_to_conversation"
+            app:destination="@id/conversation_fragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/conversation_fragment"
+        android:name="com.cnil.assistant.ui.ConversationFragment"
+        android:label="conversation_fragment"
+        tools:layout="@layout/conversation_fragment">
+        <action
+            android:id="@+id/action_conversation_to_settings"
+            app:destination="@id/settings_fragment" />
+        <action
+            android:id="@+id/action_conversation_to_article"
+            app:destination="@id/article_fragment">
+            <argument
+                android:name="requestText"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="responseText"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="answerId"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="areSimilarTopicsAvailable"
+                android:defaultValue="false"
+                app:argType="boolean" />
+        </action>
+        <action
+            android:id="@+id/action_conversation_to_bookmarks"
+            app:destination="@id/bookmarks_fragment">
+            <argument
+                android:name="datasetLocation"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/article_fragment"
+        android:name="com.cnil.assistant.ui.ArticleFragment"
+        android:label="article_fragment"
+        tools:layout="@layout/article_full_view_fragment">
+        <argument
+            android:name="requestText"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="responseText"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="answerId"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="areSimilarTopicsAvailable"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookmarks_fragment"
+        android:name="com.cnil.assistant.ui.BookmarksFragment"
+        android:label="bookmarks_fragment"
+        tools:layout="@layout/bookmarks_fragment">
+        <action
+            android:id="@+id/action_bookmarks_to_article"
+            app:destination="@id/article_fragment">
+            <argument
+                android:name="requestText"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="responseText"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="answerId"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="areSimilarTopicsAvailable"
+                android:defaultValue="false"
+                app:argType="boolean" />
+        </action>
+        <argument
+            android:name="datasetLocation"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/debug_info_fragment"
+        android:name="com.cnil.assistant.ui.DebugInfoFragment"
+        android:label="debug_info_fragment"
+        tools:layout="@layout/debug_info_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.cnil.assistant.ui.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment">
+        <action
+            android:id="@+id/action_settings_to_assistants_speech"
+            app:destination="@id/settings_assistance_speech_fragment" />
+        <action
+            android:id="@+id/action_settings_to_debug_info"
+            app:destination="@id/debug_info_fragment" />
+        <action
+            android:id="@+id/action_settings_to_settings_about_info"
+            app:destination="@id/settings_about_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settings_assistance_speech_fragment"
+        android:name="com.cnil.assistant.ui.SettingsAssistantSpeechFragment"
+        android:label="settings_assistance_speech_fragment"
+        tools:layout="@layout/settings_assistance_speech_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/settings_about_fragment"
+        android:name="com.cnil.assistant.ui.SettingsAboutFragment"
+        android:label="settings_about_fragment"
+        tools:layout="@layout/settings_about_fragment">
+    </fragment>
+</navigation>

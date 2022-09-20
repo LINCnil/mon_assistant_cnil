@@ -1,0 +1,12 @@
+{
+  "keywords": "NLP/keywords.json",
+  "classes_map": "NLP/classes_map.txt",
+  "stopwords": "NLP/stopwords.txt",
+  "vocab": "NLP/vocab.txt",
+  "test_result": "NLP/test_result.csv",
+  "crunchfile": "NLP/crunchfile.json",
+  "nlpModel": "NLP/model.lite",
+  "all_dataset": "QUESTIONS/",
+  "update_package_version": "v1.2_update_21-04-28_09-59-53",
+  "sttModel": "STT/kenlm_210428_102230.scorer"
+}

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/answer_background"
+    tools:context=".ui.BookmarksFragment"
+    tools:ignore="Overdraw">
+
+    <ImageView
+        android:id="@+id/back_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/conversation_view_margin_20"
+        android:src="@drawable/ic_back_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/bookmarks_header_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bookmarks_header"
+        android:textSize="@dimen/text_size_18"
+        android:textColor="@color/main_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/header_divider_view"
+        app:layout_constraintStart_toEndOf="@id/back_image_view" />
+
+    <ImageButton
+        android:id="@+id/bookmarks_delete_image_view"
+        android:layout_width="@dimen/control_view_button_height"
+        android:layout_height="@dimen/control_view_button_height"
+        android:layout_centerVertical="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="center"
+        android:src="@drawable/ic_bookmarks_delete"
+        tools:ignore="ContentDescription"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/header_divider_view"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/header_divider_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_view_height"
+        android:background="@color/divider_background"
+        app:layout_constraintTop_toBottomOf="@id/back_image_view" />
+
+    <TextView
+        android:id="@+id/bookmarks_no_bookmarks_header_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/conversation_view_margin_12"
+        android:paddingHorizontal="@dimen/conversation_view_margin_12"
+        android:textColor="@color/additional_text"
+        android:textSize="@dimen/text_size_16"
+        android:text="@string/bookmarks_no_bookmarks"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/bookmarks_no_bookmarks_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/conversation_view_margin_12"
+        android:paddingHorizontal="@dimen/conversation_view_margin_12"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="@color/additional_text"
+        android:text="@string/bookmarks_no_bookmarks_text"
+        app:layout_constraintTop_toBottomOf="@+id/bookmarks_no_bookmarks_header_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bookmarks_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/header_divider_view"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

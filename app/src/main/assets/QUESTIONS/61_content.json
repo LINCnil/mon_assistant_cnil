@@ -1,0 +1,11 @@
+{
+    "id": "61",
+    "uri": "/selfcnil/api/configuration/site/document/61/content",
+    "contents": [
+        {
+            "locale": "fr_FR",
+            "content": "Le&nbsp;FCC est un fichier national géré par la Banque de France. Il recense les <span style=\"color:#2179c4;\"><strong>incidents de paiement liés aux chèques</strong></span> et les incidents de paiement liés <span style=\"color:#2179c4;\"><strong>aux cartes bancaires</strong></span> :\r\n<ul>\r\n\t<li>Pour les&nbsp;chèques, le FCC&nbsp;recense les personnes ayant <span style=\"color:#2179c4;\"><strong>interdiction bancaire ou judiciaire</strong></span> d'émettre des chèques, en particulier pour insuffisance de provision.</li>\r\n\t<li>Pour les cartes bancaires \"CB\", le FCC&nbsp;recense les personnes faisant l'objet d'un retrait de carte bancaire pour <span style=\"color:#2179c4;\"><strong>usage abusif</strong></span>.&nbsp;Pour les retraits de cartes bancaires, les signalements ne sont pas obligatoires. Les banques ne transmettent ces informations que si elles le souhaitent.&nbsp;</li>\r\n</ul>\r\n<br />\r\nLe FCC&nbsp;est consulté par les banques avant la délivrance de chéquiers à un nouveau titulaire de compte ou avant la délivrance d'une carte bancaire \"CB\".<br />\r\n<br />\r\nDans le cadre de la prévention des risques d'impayés, les banques peuvent également consulter le FCC avant l'ouverture d'un compte ou l'octroi d'un crédit.<br />\r\n<br />\r\n<span style=\"color:#ff5122;\"><strong>Pour en savoir plus</strong></span>: <a href=\"https://www.cnil.fr/fr/fcc-fichier-central-des-cheques-et-des-retraits-de-cartes-bancaires-cb-0\" target=\"_blank\">Le FCC Fichier en fiche</a>",
+            "format": "text/html"
+        }
+    ]
+}

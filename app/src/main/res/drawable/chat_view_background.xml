@@ -1,0 +1,8 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid
+        android:width="@dimen/border_view_width"
+        android:color="@color/answer_background" />
+
+    <corners
+        android:radius="@dimen/chat_view_corner_radius" />
+</shape>

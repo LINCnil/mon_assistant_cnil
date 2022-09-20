@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/conversation_background"
+    tools:context=".ui.FirstSettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cnil_first_settings_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/chat_view_background"
+        android:paddingHorizontal="@dimen/first_setup_margin_32"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/cnil_emblem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_cnil_emblem"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.3"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/first_settings_welcome_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/first_setup_margin_24"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/text_size_24"
+            android:text="@string/welcome"
+            app:layout_constraintBottom_toTopOf="@+id/first_settings_text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/first_settings_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/first_setup_margin_48"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/text_size_14"
+            android:text="@string/first_time_launch_text"
+            app:layout_constraintBottom_toTopOf="@+id/first_settings_start_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/first_settings_start_button"
+            android:layout_width="@dimen/first_setup_button_width"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/first_setup_margin_24"
+            android:text="@string/start_button"
+            app:layout_constraintBottom_toTopOf="@+id/first_settings_skip_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/BlueButton" />
+
+        <Button
+            android:id="@+id/first_settings_skip_button"
+            android:layout_width="@dimen/first_setup_button_width"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/first_setup_margin_48"
+            android:text="@string/skip_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/TransparentButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

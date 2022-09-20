@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">CNILassistant</string>
+    <string name="denied_record_audio_permission">Record Audio permission is required to use voice input</string>
+
+    <string name="answer_progress_initializing">Initializing…</string>
+    <string name="answer_progress_listening">Listening…</string>
+    <string name="answer_progress_processing">Processing…</string>
+    <string name="enter_your_question_hint">Enter your question</string>
+
+    <string name="quick_button_learn_more_about_cnil">Learn more about CNIL virtual assistant</string>
+    <string name="quick_button_bookmarks">View my bookmarks</string>
+    <string name="quick_button_news">Show latest news article</string>
+    <string name="you_can_clarify_or_rephrase_the_question">You can clarify or rephrase the question</string>
+    <string name="nothing_found">Nothing found…</string>
+
+    <!-- Article Fragment -->
+    <string name="article_header">Article</string>
+    <string name="article_similar_options">To review similar topics go back to the search results</string>
+
+    <!-- Article Fragment -->
+    <string name="bookmarks_header">Bookmarks</string>
+    <string name="bookmarks_no_bookmarks">No bookmarks</string>
+    <string name="bookmarks_no_bookmarks_text">You can add ones in article page view</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="first_time_launch_text">Hello, I am CNIL virtual assistant.\n\nIt’s your first launching. You can make quick application setup</string>
+    <string name="skip_button">Skip</string>
+    <string name="start_button">Start</string>
+    <string name="next_button">Next</string>
+    <string name="back_button">Back</string>
+    <string name="done_button">Done</string>
+    <string name="welcome_hello"><b>Welcome to CNIL virtual assistant</b>\n\nWhat do you want to start with?</string>
+
+    <!-- Update dialogs -->
+    <string name="progress_dialog_header">Updating…</string>
+    <string name="progress_dialog_message">This may take few minutes</string>
+    <string name="update_dialog_header">New processing files are available</string>
+    <string name="update_dialog_message">Application files could be updated for better performance and greater knowledge. Would you like to update? It could take several minutes</string>
+    <string name="update_dialog_positive_button">Update</string>
+    <string name="update_dialog_negative_button">Remind later</string>
+    <string name="ok_button">OK</string>
+    <string name="try_again_button">Try again</string>
+    <string name="update_failure_dialog_header">Update failed</string>
+    <string name="update_failure_dialog_message">Something went wrong during the update</string>
+
+    <!-- Debug info Fragment -->
+    <string name="debug_info_clear_logs">Clear Logs</string>
+    <string name="debug_info_export_logs">Export Logs</string>
+
+    <!-- Settings -->
+    <string name="settings_header">Settings</string>
+    <string name="settings_section_assistant_speech">Assistant speech</string>
+    <string name="settings_section_assistant_auto_start_speech_description">Assistant starts speech automatically</string>
+    <string name="settings_section_assistant_auto_start_speech_duration">Speech autostart duration</string>
+    <string name="settings_section_assistant_auto_start_speech_full">Full article</string>
+    <string name="settings_section_assistant_auto_start_speech_short">1 sentence</string>
+    <string name="settings_section_voice_male">Male</string>
+    <string name="settings_section_voice_female">Female</string>
+    <string name="settings_section_recording">Audio Recording</string>
+    <string name="settings_section_recording_off">Off</string>
+    <string name="settings_section_recording_on">On</string>
+    <string name="settings_section_log">Logs</string>
+    <string name="settings_section_about_header">About</string>
+    <string name="settings_section_app_version_header">App version</string>
+    <string name="settings_section_model_version_header">Model version</string>
+
+    <!-- First Launch Settings Setup -->
+    <string name="first_launch_settings_assistants_voice">Assistant\'s voice</string>
+    <string name="first_launch_settings_assistants_voice_choice_text">Choose a voice you would like to assistant will use</string>
+    <string name="first_launch_settings_assistants_auto_speech">Auto speech</string>
+    <string name="first_launch_settings_assistants_auto_speech_text">Articles can be voiced automatically</string>
+    <string name="first_launch_settings_assistants_auto_speech_auto_start">Speech autostart</string>
+    <string name="first_launch_settings_assistants_auto_speech_full_article">Voice full article</string>
+
+</resources>
