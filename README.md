@@ -1,7 +1,7 @@
 Mon assistant CNIL (Android)
 ===
 
-** Le LINC a développé un assistant vocal fonctionnant exclusivement en local, et sans connexion internet. Cette preuve de concept, «Mon Assistant CNIL », est disponible et testable sur les magasins d’applications [Android](https://play.google.com/store/apps/details?id=com.cnil.assistant) et [iOS](https://apps.apple.com/sk/app/mon-assistant-cnil/id1642545555).**
+**Le LINC a développé un assistant vocal fonctionnant exclusivement en local, et sans connexion internet. Cette preuve de concept, «Mon Assistant CNIL », est disponible et testable sur les magasins d’applications [Android](https://play.google.com/store/apps/details?id=com.cnil.assistant) et [iOS](https://apps.apple.com/sk/app/mon-assistant-cnil/id1642545555).**
 
 ## Arhitecture
 L'architecture MVVM est utilisée pour séparer les objets en trois groupes d'abstraction distincts:
