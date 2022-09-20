@@ -11,7 +11,7 @@ CocoaPods utilise comme gestionnaire de dépendances pour fournir un moyen simpl
 
 L'identifiant du groupe d'applications est "com.cnil.assistant"
 
-## Arhitecture
+## Architecture
 L'architecture MVVM est utilisée pour séparer les objets en trois groupes d'abstraction distincts:
 •	View est responsable de la couche d'interface utilisateur et de l'interaction avec l'utilisateur (afficher les données, capturer les entrées de l'utilisateur). Les données d'entrée peuvent être capturées sous forme de fichier audio ou de texte.
 •	Les modèles de vue transforment les informations du modèle en valeurs pouvant être affichées sur une vue. Et rassembler les données d'entrée et les transmettre pour traitement au modèle
