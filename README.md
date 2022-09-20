@@ -36,9 +36,7 @@ La fonctionnalité STT est présentée dans l'application sous la forme d'une bi
 La bibliothèque STT comprend des méthodes d'initialisation et d'inférence de modèle.
 
 L'initialisation de la partie STT vise à préparer le modèle pour une interaction future. À ce stade:
-
 * l'application charge les données du fichier kenlm.scorer (initialisation du modèle linguistique)
-
 * deepspeech-models.tflite (initialisation du modèle acoustique)
 
 Dans l'étape d'inférence, le modèle Tensor Flow Lite traite l'entrée au format d'un fichier audio ou d'un flux audio. La sortie du résultat est un texte reconnu. La sortie de la partie STT est considérée comme une entrée pour le module NLP dans le pipeline de traitement.
